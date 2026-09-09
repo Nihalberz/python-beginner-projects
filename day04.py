@@ -48,26 +48,28 @@ import random
                 # ROCK, PAPER ,SCISSOR
 choices=["rock","paper","scissors"]
 user_choice=input("Choose one ,ROCK , PAPER , SCISSORS:").lower()
-computer_choice=random.choice(choices)
-print("you choose:",user_choice)
-print("Computer chose:", computer_choice)
-
-if computer_choice==user_choice:
-    print("DRAW")
-elif computer_choice=="rock":
-    if user_choice=="paper":
-        print("You win")
-    else:
-        print("you lose")
-elif computer_choice==("paper"):
-    if user_choice==("scissors"):
-        print("you win")
-    else:
-        print("you lose")
-elif computer_choice=="scissors":
-    if user_choice=="rock":
-        print("you win")
-    else:
-        print("you lose")
+if user_choice not in choices:
+      print("invalid input")
 else:
-    print("invalid input")
+     computer_choice=random.choice(choices)
+
+    print("you choose:",user_choice)
+    print("Computer chose:", computer_choice)
+
+   if computer_choice==user_choice:
+        print("DRAW")
+   elif computer_choice=="rock":
+       if user_choice=="paper":
+          print("You win")
+       else:
+          print("you lose")
+   elif computer_choice==("paper"):
+      if user_choice==("scissors"):
+          print("you win")
+      else:
+          print("you lose")
+   elif computer_choice=="scissors":
+       if user_choice=="rock":
+          print("you win")
+       else:
+          print("you lose")
